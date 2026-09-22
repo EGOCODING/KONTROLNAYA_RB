@@ -3,38 +3,368 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Каталог услуг</title>
-  <meta name="description" content="Каталог услуг по изучению осетинского языка">
+  <title>Каталог — ООО «БОРИС»</title>
+  <meta name="description" content="Каталог электроники и гаджетов ООО БОРИС">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
   <header class="site-header">
-    <div class="site-header__inner">  
-      <a href="index.html" class="site-header__logo">ООО Борис</a>
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__logo">БОРИС</a>
       <nav class="site-nav">
         <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#modal-order">Оставить заявку</a></li>
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="site-nav__link" href="#modal-order">Оставить заявку</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- уникальный контент -->
+
+    <section class="section">
+      <div class="container">
+        <h1 class="mb-md">Каталог товаров</h1>
+        <p class="text-muted mb-lg">25 товаров в 8 категориях</p>
+
+        <div class="grid grid--catalog">
+
+          <!-- Смартфоны -->
+          <article class="product-card">
+            <span class="badge badge--hit badge--corner">Хит</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Смартфон Galaxy A55">
+            <h3 class="product-card__title">Смартфон Galaxy A55</h3>
+            <p class="product-card__description">6.6" AMOLED, 8/256 ГБ, камера 50 МП</p>
+            <p class="product-card__price">34 990 ₽ <span class="product-card__old-price">39 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=1">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=1">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--new badge--corner">Новинка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Смартфон iPhone 15">
+            <h3 class="product-card__title">Смартфон iPhone 15</h3>
+            <p class="product-card__description">6.1" OLED, 128 ГБ, чип A16 Bionic</p>
+            <p class="product-card__price">79 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=2">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=2">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Смартфон Xiaomi Redmi Note 13">
+            <h3 class="product-card__title">Смартфон Xiaomi Redmi Note 13</h3>
+            <p class="product-card__description">6.67" AMOLED, 8/256 ГБ, батарея 5000 мАч</p>
+            <p class="product-card__price">22 990 ₽ <span class="product-card__old-price">25 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=3">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=3">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/placeholder.svg" alt="Смартфон Google Pixel 8">
+            <h3 class="product-card__title">Смартфон Google Pixel 8</h3>
+            <p class="product-card__description">6.2" OLED, 8/128 ГБ, чистый Android</p>
+            <p class="product-card__price">64 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=4">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=4">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card product-card--out-of-stock">
+            <span class="badge badge--corner">Нет в наличии</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Смартфон Samsung Galaxy S24 Ultra">
+            <h3 class="product-card__title">Смартфон Samsung Galaxy S24 Ultra</h3>
+            <p class="product-card__description">6.8" QHD+, 12/512 ГБ, стилус S Pen</p>
+            <p class="product-card__price">129 990 ₽</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" disabled>Нет в наличии</button>
+              <a class="button button--secondary product-card__button" href="product.html?id=5">Подробнее</a>
+            </div>
+          </article>
+
+          <!-- Ноутбуки -->
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Ноутбук MacBook Air M3">
+            <h3 class="product-card__title">Ноутбук MacBook Air M3</h3>
+            <p class="product-card__description">13.6" Retina, 8/256 ГБ, до 18 часов работы</p>
+            <p class="product-card__price">109 990 ₽ <span class="product-card__old-price">119 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=6">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=6">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/placeholder.svg" alt="Ноутбук ASUS VivoBook 15">
+            <h3 class="product-card__title">Ноутбук ASUS VivoBook 15</h3>
+            <p class="product-card__description">15.6" Full HD, Ryzen 5, 16/512 ГБ</p>
+            <p class="product-card__price">54 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=7">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=7">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Ноутбук Lenovo IdeaPad Slim 3">
+            <h3 class="product-card__title">Ноутбук Lenovo IdeaPad Slim 3</h3>
+            <p class="product-card__description">15.6" IPS, Intel Core i5, 16/512 ГБ</p>
+            <p class="product-card__price">49 990 ₽ <span class="product-card__old-price">57 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=8">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=8">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--new badge--corner">Новинка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Ноутбук Huawei MateBook D16">
+            <h3 class="product-card__title">Ноутбук Huawei MateBook D16</h3>
+            <p class="product-card__description">16" IPS, Intel Core i7, 16/1 ТБ</p>
+            <p class="product-card__price">74 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=9">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=9">Подробнее</a>
+            </div>
+          </article>
+
+          <!-- Планшеты -->
+          <article class="product-card">
+            <img class="product-card__image" src="images/placeholder.svg" alt="Планшет iPad Air 11">
+            <h3 class="product-card__title">Планшет iPad Air 11</h3>
+            <p class="product-card__description">11" Liquid Retina, 128 ГБ, чип M2</p>
+            <p class="product-card__price">64 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=10">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=10">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Планшет Samsung Galaxy Tab S9">
+            <h3 class="product-card__title">Планшет Samsung Galaxy Tab S9</h3>
+            <p class="product-card__description">11" AMOLED, 8/128 ГБ, стилус в комплекте</p>
+            <p class="product-card__price">59 990 ₽ <span class="product-card__old-price">66 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=11">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=11">Подробнее</a>
+            </div>
+          </article>
+
+          <!-- Наушники -->
+          <article class="product-card">
+            <span class="badge badge--hit badge--corner">Хит</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Наушники AirPods Pro 2">
+            <h3 class="product-card__title">Наушники AirPods Pro 2</h3>
+            <p class="product-card__description">Активное шумоподавление, USB-C, MagSafe</p>
+            <p class="product-card__price">19 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=12">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=12">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Наушники Sony WH-1000XM5">
+            <h3 class="product-card__title">Наушники Sony WH-1000XM5</h3>
+            <p class="product-card__description">Полноразмерные, Bluetooth, до 30 часов</p>
+            <p class="product-card__price">29 990 ₽ <span class="product-card__old-price">34 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=13">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=13">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/placeholder.svg" alt="Наушники JBL Tune 770NC">
+            <h3 class="product-card__title">Наушники JBL Tune 770NC</h3>
+            <p class="product-card__description">Накладные, Bluetooth 5.3, до 70 часов</p>
+            <p class="product-card__price">8 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=14">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=14">Подробнее</a>
+            </div>
+          </article>
+
+          <!-- Умные часы -->
+          <article class="product-card">
+            <span class="badge badge--new badge--corner">Новинка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Умные часы Apple Watch Series 9">
+            <h3 class="product-card__title">Умные часы Apple Watch Series 9</h3>
+            <p class="product-card__description">45 мм, GPS, Always-On Retina</p>
+            <p class="product-card__price">39 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=15">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=15">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Умные часы Samsung Galaxy Watch 6">
+            <h3 class="product-card__title">Умные часы Samsung Galaxy Watch 6</h3>
+            <p class="product-card__description">44 мм, AMOLED, BT, GPS</p>
+            <p class="product-card__price">24 990 ₽ <span class="product-card__old-price">27 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=16">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=16">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/placeholder.svg" alt="Умные часы Huawei Watch GT 4">
+            <h3 class="product-card__title">Умные часы Huawei Watch GT 4</h3>
+            <p class="product-card__description">46 мм, до 14 дней автономности</p>
+            <p class="product-card__price">19 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=17">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=17">Подробнее</a>
+            </div>
+          </article>
+
+          <!-- Телевизоры -->
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Телевизор LG OLED evo C4">
+            <h3 class="product-card__title">Телевизор LG OLED evo C4</h3>
+            <p class="product-card__description">55", 4K, 120 Гц, Smart TV</p>
+            <p class="product-card__price">139 990 ₽ <span class="product-card__old-price">159 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=18">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=18">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <img class="product-card__image" src="images/placeholder.svg" alt="Телевизор Samsung QLED Q60D">
+            <h3 class="product-card__title">Телевизор Samsung QLED Q60D</h3>
+            <p class="product-card__description">50", 4K, Quantum HDR, Smart TV</p>
+            <p class="product-card__price">54 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=19">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=19">Подробнее</a>
+            </div>
+          </article>
+
+          <!-- Игровые консоли -->
+          <article class="product-card">
+            <span class="badge badge--hit badge--corner">Хит</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Игровая консоль PlayStation 5 Slim">
+            <h3 class="product-card__title">Игровая консоль PlayStation 5 Slim</h3>
+            <p class="product-card__description">1 ТБ, Blu-ray, геймпад DualSense</p>
+            <p class="product-card__price">59 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=20">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=20">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Игровая консоль Xbox Series X">
+            <h3 class="product-card__title">Игровая консоль Xbox Series X</h3>
+            <p class="product-card__description">1 ТБ, 4K, 120 FPS, геймпад</p>
+            <p class="product-card__price">54 990 ₽ <span class="product-card__old-price">59 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=21">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=21">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card product-card--out-of-stock">
+            <span class="badge badge--new badge--corner">Новинка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Портативная консоль Steam Deck OLED">
+            <h3 class="product-card__title">Портативная консоль Steam Deck OLED</h3>
+            <p class="product-card__description">7.4" HDR OLED, 512 ГБ, SteamOS</p>
+            <p class="product-card__price">64 990 ₽</p>
+            <div class="product-card__actions">
+              <button class="button button--primary product-card__button" disabled>Нет в наличии</button>
+              <a class="button button--secondary product-card__button" href="product.html?id=22">Подробнее</a>
+            </div>
+          </article>
+
+          <!-- Фотоаппараты -->
+          <article class="product-card">
+            <img class="product-card__image" src="images/placeholder.svg" alt="Фотоаппарат Sony Alpha A6700">
+            <h3 class="product-card__title">Фотоаппарат Sony Alpha A6700</h3>
+            <p class="product-card__description">26 МП APS-C, 4K 120fps, стабилизация</p>
+            <p class="product-card__price">139 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=23">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=23">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Фотоаппарат Canon EOS R50">
+            <h3 class="product-card__title">Фотоаппарат Canon EOS R50</h3>
+            <p class="product-card__description">24 МП APS-C, 4K 30fps, компактный</p>
+            <p class="product-card__price">64 990 ₽ <span class="product-card__old-price">69 990 ₽</span></p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=24">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=24">Подробнее</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="badge badge--hit badge--corner">Хит</span>
+            <img class="product-card__image" src="images/placeholder.svg" alt="Экшн-камера GoPro HERO 12">
+            <h3 class="product-card__title">Экшн-камера GoPro HERO 12</h3>
+            <p class="product-card__description">5.3K, HyperSmooth, водонепроницаемая</p>
+            <p class="product-card__price">39 990 ₽</p>
+            <div class="product-card__actions">
+              <a class="button button--primary product-card__button" href="order.html?id=25">Купить</a>
+              <a class="button button--secondary product-card__button" href="product.html?id=25">Подробнее</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
-    <!-- подвал -->
+    <div class="container">
+      <p>© 2026 ООО «БОРИС» · Каталог электроники и гаджетов</p>
+    </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Модальное окно -->
+  <div class="modal" id="modal-order">
+    <div class="modal__content">
+      <a href="#" class="modal__close" aria-label="Закрыть">×</a>
+      <h3 class="mb-md">Оставить заявку</h3>
+      <form class="form">
+        <div class="form__group">
+          <label class="form__label" for="name">Имя</label>
+          <input class="form__input" type="text" id="name" name="name" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="phone">Телефон</label>
+          <input class="form__input" type="tel" id="phone" name="phone" required>
+        </div>
+        <button type="submit" class="button button--primary button--block">Отправить</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 </html>
-
-

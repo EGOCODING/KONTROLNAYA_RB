@@ -354,12 +354,16 @@ p {
   font-weight: 700;
   color: var(--color-primary);
 }
-
-.product-card__button {
+.product-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
   margin-top: auto;
-  align-self: stretch;
 }
 
+.product-card__button {
+  align-self: stretch;
+}
 /* Модификаторы */
 .product-card--featured {
   border: 2px solid var(--color-primary);
@@ -680,4 +684,13 @@ p {
 .modal__close:hover {
   background: var(--color-primary-light);
   color: var(--color-primary-dark);
+}
+
+.product-card__old-price {
+  display: inline-block;
+  text-decoration: line-through;
+  color: var(--color-text-muted);
+  font-size: 0.85em;
+  font-weight: 400;
+  margin-left: var(--space-sm);
 }
