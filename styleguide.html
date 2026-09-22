@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide — Каталог услуг</title>
+  <meta name="description" content="Стайлгайд проекта: цвета, типографика, компоненты">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Локальные стили только для страницы стайлгайда */
+    .sg-section {
+      padding: var(--space-2xl) 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .sg-section:last-child { border-bottom: none; }
+
+    .sg-section__title {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-sm);
+      border-bottom: 3px solid var(--color-primary);
+      display: inline-block;
+    }
+
+    .sg-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-md);
+      align-items: center;
+      margin-bottom: var(--space-lg);
+    }
+
+    .sg-label {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-xs);
+      font-family: var(--font-mono, monospace);
+    }
+
+    .sg-swatch {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+      margin-bottom: var(--space-sm);
+    }
+
+    .sg-color-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .sg-color-code {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      font-family: monospace;
+    }
+
+    .sg-sidenav {
+      position: sticky;
+      top: 80px;
+      align-self: start;
+    }
+
+    .sg-sidenav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+    }
+
+    .sg-sidenav__link {
+      display: block;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--color-text);
+      font-size: 0.9rem;
+    }
+
+    .sg-sidenav__link:hover {
+      background: var(--color-primary-light);
+      color: var(--color-primary-dark);
+    }
+
+    .sg-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: var(--space-2xl);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-lg);
+    }
+
+    @media (max-width: 900px) {
+      .sg-layout { grid-template-columns: 1fr; }
+      .sg-sidenav { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================
+       ШАПКА
+       ============================ -->
+  <header class="site-header">
+    <div class="site-header__inner">  
+      <a href="index.html" class="site-header__logo">ООО Борис</a>
+      <nav class="site-nav">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="#modal-order">Оставить заявку</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="sg-layout">
+
+    <!-- ============================
+         БОКОВАЯ НАВИГАЦИЯ
+         ============================ -->
+    <aside class="sg-sidenav">
+      <h3 class="mb-md">Разделы</h3>
+      <ul class="sg-sidenav__list">
+        <li><a class="sg-sidenav__link" href="#colors">1. Цвета</a></li>
+        <li><a class="sg-sidenav__link" href="#typography">2. Типографика</a></li>
+        <li><a class="sg-sidenav__link" href="#buttons">3. Кнопки</a></li>
+        <li><a class="sg-sidenav__link" href="#badges">4. Бейджи</a></li>
+        <li><a class="sg-sidenav__link" href="#links">5. Ссылки</a></li>
+        <li><a class="sg-sidenav__link" href="#cards">6. Карточки</a></li>
+        <li><a class="sg-sidenav__link" href="#grid">7. Сетки</a></li>
+        <li><a class="sg-sidenav__link" href="#forms">8. Формы</a></li>
+        <li><a class="sg-sidenav__link" href="#table">9. Таблицы</a></li>
+        <li><a class="sg-sidenav__link" href="#modal">10. Модальное окно</a></li>
+        <li><a class="sg-sidenav__link" href="#positioning">11. Позиционирование</a></li>
+        <li><a class="sg-sidenav__link" href="#spacing">12. Отступы</a></li>
+      </ul>
+    </aside>
+
+    <!-- ============================
+         КОНТЕНТ
+         ============================ -->
+    <main>
+
+      <h1 class="mb-md">Style Guide</h1>
+      <p class="text-muted mb-lg">
+        Единый источник правды по дизайну проекта. Все компоненты интерфейса,
+        их состояния и правила использования.
+      </p>
+
+      <!-- ============================
+           1. ЦВЕТА
+           ============================ -->
+      <section class="sg-section" id="colors">
+        <h2 class="sg-section__title">1. Цвета</h2>
+
+        <h3 class="mb-md">Основные</h3>
+        <div class="grid grid--4 mb-lg">
+          <div>
+            <div class="sg-swatch" style="background:#0057b8;"></div>
+            <div class="sg-color-name">Primary</div>
+            <div class="sg-color-code">#0057B8</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#003f86;"></div>
+            <div class="sg-color-name">Primary Dark</div>
+            <div class="sg-color-code">#003F86</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#e6f0fa;"></div>
+            <div class="sg-color-name">Primary Light</div>
+            <div class="sg-color-code">#E6F0FA</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#00a3e0;"></div>
+            <div class="sg-color-name">Accent</div>
+            <div class="sg-color-code">#00A3E0</div>
+          </div>
+        </div>
+
+        <h3 class="mb-md">Нейтральные</h3>
+        <div class="grid grid--4 mb-lg">
+          <div>
+            <div class="sg-swatch" style="background:#ffffff;"></div>
+            <div class="sg-color-name">Background</div>
+            <div class="sg-color-code">#FFFFFF</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#f5f8fc;"></div>
+            <div class="sg-color-name">Background Alt</div>
+            <div class="sg-color-code">#F5F8FC</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#1a1f2b;"></div>
+            <div class="sg-color-name">Text</div>
+            <div class="sg-color-code">#1A1F2B</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#5a6478;"></div>
+            <div class="sg-color-name">Text Muted</div>
+            <div class="sg-color-code">#5A6478</div>
+          </div>
+        </div>
+
+        <h3 class="mb-md">Семантические</h3>
+        <div class="grid grid--4">
+          <div>
+            <div class="sg-swatch" style="background:#2e7d32;"></div>
+            <div class="sg-color-name">Success</div>
+            <div class="sg-color-code">#2E7D32</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#c62828;"></div>
+            <div class="sg-color-name">Danger</div>
+            <div class="sg-color-code">#C62828</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#f9a825;"></div>
+            <div class="sg-color-name">Warning</div>
+            <div class="sg-color-code">#F9A825</div>
+          </div>
+          <div>
+            <div class="sg-swatch" style="background:#d5e2f0;"></div>
+            <div class="sg-color-name">Border</div>
+            <div class="sg-color-code">#D5E2F0</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================
+           2. ТИПОГРАФИКА
+           ============================ -->
+      <section class="sg-section" id="typography">
+        <h2 class="sg-section__title">2. Типографика</h2>
+
+        <h1>Заголовок H1 — 2.5rem</h1>
+        <h2>Заголовок H2 — 2rem</h2>
+        <h3>Заголовок H3 — 1.5rem</h3>
+        <h4>Заголовок H4 — 1.25rem</h4>
+        <h5>Заголовок H5 — 1.1rem</h5>
+        <h6>Заголовок H6 — 1rem</h6>
+
+        <p>Обычный параграф текста. Размер 16px, межстрочный интервал 1.5.
+           Используется для основного контента страницы.</p>
+
+        <p class="text-muted">Приглушённый текст — для второстепенной информации,
+           подписей и сносок.</p>
+
+        <p class="text-primary">Акцентный текст — используется для выделения
+           ключевых слов и ссылок.</p>
+
+        <p class="text-success">Текст успеха — например, «Заявка отправлена».</p>
+
+        <p class="text-danger">Текст ошибки — например, «Неверный формат email».</p>
+
+        <p class="text-center">Текст по центру.</p>
+      </section>
+
+      <!-- ============================
+           3. КНОПКИ
+           ============================ -->
+      <section class="sg-section" id="buttons">
+        <h2 class="sg-section__title">3. Кнопки</h2>
+
+        <div class="sg-label">.button--primary</div>
+        <div class="sg-row">
+          <a class="button button--primary" href="#">Основная</a>
+          <a class="button button--primary button--sm" href="#">Small</a>
+          <a class="button button--primary button--lg" href="#">Large</a>
+          <button class="button button--primary" disabled>Disabled</button>
+        </div>
+
+        <div class="sg-label">.button--secondary</div>
+        <div class="sg-row">
+          <a class="button button--secondary" href="#">Вторичная</a>
+          <a class="button button--secondary button--sm" href="#">Small</a>
+          <a class="button button--secondary button--lg" href="#">Large</a>
+        </div>
+
+        <div class="sg-label">.button--ghost</div>
+        <div class="sg-row">
+          <a class="button button--ghost" href="#">Призрачная</a>
+          <a class="button button--ghost button--sm" href="#">Small</a>
+        </div>
+
+        <div class="sg-label">.button--danger / .button--success</div>
+        <div class="sg-row">
+          <a class="button button--danger" href="#">Удалить</a>
+          <a class="button button--success" href="#">Сохранить</a>
+        </div>
+
+        <div class="sg-label">.button--block (на всю ширину)</div>
+        <div style="max-width:400px;">
+          <a class="button button--primary button--block" href="#">Кнопка на всю ширину</a>
+        </div>
+      </section>
+
+      <!-- ============================
+           4. БЕЙДЖИ
+           ============================ -->
+      <section class="sg-section" id="badges">
+        <h2 class="sg-section__title">4. Бейджи</h2>
+
+        <div class="sg-row">
+          <span class="badge">Обычный</span>
+          <span class="badge badge--new">Новинка</span>
+          <span class="badge badge--sale">Скидка</span>
+          <span class="badge badge--hit">Хит</span>
+          <span class="badge badge--success">В наличии</span>
+        </div>
+
+        <p class="text-muted">Бейдж-уголок используется в карточках:
+           <code>.badge.badge--corner</code>.</p>
+      </section>
+
+      <!-- ============================
+           5. ССЫЛКИ
+           ============================ -->
+      <section class="sg-section" id="links">
+        <h2 class="sg-section__title">5. Ссылки</h2>
+
+        <p>Обычная ссылка: <a href="#">наведи на меня</a></p>
+        <p>Ссылка с фокусом: нажми <kbd>Tab</kbd> и увидишь синюю обводку.</p>
+      </section>
+
+      <!-- ============================
+           6. КАРТОЧКИ
+           ============================ -->
+      <section class="sg-section" id="cards">
+        <h2 class="sg-section__title">6. Карточки</h2>
+
+        <h3 class="mb-md">Базовая карточка</h3>
+        <div class="grid grid--3 mb-lg">
+          <article class="card">
+            <h3 class="card__title">Заголовок карточки</h3>
+            <p class="card__text">Описание содержимого карточки. Здесь можно
+               разместить любой текст.</p>
+            <div class="card__footer">
+              <span class="badge">Метка</span>
+              <a class="button button--primary button--sm" href="#">Действие</a>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="mb-md">Карточка товара</h3>
+        <div class="grid grid--3 mb-lg">
+
+          <article class="product-card">
+            <span class="badge badge--sale badge--corner">Скидка</span>
+            <img class="product-card__image" src="https://via.placeholder.com/400x300/e6f0fa/0057b8?text=Курс" alt="Курс осетинского">
+            <h3 class="product-card__title">Курс осетинского с нуля</h3>
+            <p class="product-card__description">12 уроков, практика речи, поддержка преподавателя.</p>
+            <p class="product-card__price">2 990 ₽</p>
+            <a class="button button--primary product-card__button" href="#">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--featured">
+            <span class="badge badge--hit badge--corner">Хит</span>
+            <img class="product-card__image" src="https://via.placeholder.com/400x300/e6f0fa/0057b8?text=Разговорный" alt="Разговорный курс">
+            <h3 class="product-card__title">Разговорный осетинский</h3>
+            <p class="product-card__description">Только живая практика с носителем языка.</p>
+            <p class="product-card__price">4 990 ₽</p>
+            <a class="button button--primary product-card__button" href="#">Подробнее</a>
+          </article>
+
+          <article class="product-card product-card--out-of-stock">
+            <span class="badge badge--corner">Нет в наличии</span>
+            <img class="product-card__image" src="https://via.placeholder.com/400x300/e6f0fa/0057b8?text=Дети" alt="Курс для детей">
+            <h3 class="product-card__title">Осетинский для детей</h3>
+            <p class="product-card__description">Игровой формат для младших школьников.</p>
+            <p class="product-card__price">1 990 ₽</p>
+            <a class="button button--secondary product-card__button" href="#">Узнать больше</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- ============================
+           7. СЕТКИ
+           ============================ -->
+      <section class="sg-section" id="grid">
+        <h2 class="sg-section__title">7. Сетки</h2>
+
+        <h3 class="mb-md">.grid--2</h3>
+        <div class="grid grid--2 mb-lg">
+          <div class="card">Колонка 1</div>
+          <div class="card">Колонка 2</div>
+        </div>
+
+        <h3 class="mb-md">.grid--3</h3>
+        <div class="grid grid--3 mb-lg">
+          <div class="card">Колонка 1</div>
+          <div class="card">Колонка 2</div>
+          <div class="card">Колонка 3</div>
+        </div>
+
+        <h3 class="mb-md">.grid--catalog (автоадаптив)</h3>
+        <div class="grid grid--catalog">
+          <div class="card">Карточка</div>
+          <div class="card">Карточка</div>
+          <div class="card">Карточка</div>
+          <div class="card">Карточка</div>
+          <div class="card">Карточка</div>
+          <div class="card">Карточка</div>
+        </div>
+      </section>
+
+      <!-- ============================
+           8. ФОРМЫ
+           ============================ -->
+      <section class="sg-section" id="forms">
+        <h2 class="sg-section__title">8. Формы</h2>
+
+        <form class="form">
+          <div class="form__group">
+            <label class="form__label" for="sg-name">Имя</label>
+            <input class="form__input" type="text" id="sg-name" name="name" placeholder="Введите имя" required>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="sg-email">Email</label>
+            <input class="form__input" type="email" id="sg-email" name="email" placeholder="example@mail.ru" required>
+            <span class="form__hint">Мы не передаём email третьим лицам.</span>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="sg-phone">Телефон</label>
+            <input class="form__input" type="tel" id="sg-phone" name="phone" placeholder="+7 (___) ___-__-__">
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="sg-topic">Тема заявки</label>
+            <select class="form__select" id="sg-topic" name="topic">
+              <option>Курс осетинского</option>
+              <option>Разговорный клуб</option>
+              <option>Индивидуальные занятия</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="sg-comment">Комментарий</label>
+            <textarea class="form__textarea" id="sg-comment" name="comment" placeholder="Ваш вопрос"></textarea>
+          </div>
+
+          <div class="form__checkbox">
+            <input type="checkbox" id="sg-agree" required>
+            <label for="sg-agree">Согласен на обработку персональных данных</label>
+          </div>
+
+          <div class="form__actions">
+            <button type="submit" class="button button--primary">Отправить</button>
+            <button type="reset" class="button button--ghost">Очистить</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ============================
+           9. ТАБЛИЦЫ
+           ============================ -->
+      <section class="sg-section" id="table">
+        <h2 class="sg-section__title">9. Таблицы</h2>
+
+        <table class="table">
+          <caption>Характеристики курсов</caption>
+          <thead>
+            <tr>
+              <th>Курс</th>
+              <th>Уроков</th>
+              <th>Практика</th>
+              <th>Цена</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Осетинский с нуля</td>
+              <td>12</td>
+              <td>Да</td>
+              <td>2 990 ₽</td>
+            </tr>
+            <tr>
+              <td>Разговорный</td>
+              <td>20</td>
+              <td>Да</td>
+              <td>4 990 ₽</td>
+            </tr>
+            <tr>
+              <td>Для детей</td>
+              <td>8</td>
+              <td>Игровая</td>
+              <td>1 990 ₽</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============================
+           10. МОДАЛЬНОЕ ОКНО
+           ============================ -->
+      <section class="sg-section" id="modal">
+        <h2 class="sg-section__title">10. Модальное окно</h2>
+
+        <p class="mb-md">Нажми на кнопку — откроется модальное окно.</p>
+
+        <a class="button button--primary" href="#modal-demo">Открыть модальное окно</a>
+
+        <div class="modal" id="modal-demo">
+          <div class="modal__content">
+            <a href="#modal" class="modal__close" aria-label="Закрыть">×</a>
+            <h3 class="mb-md">Заголовок окна</h3>
+            <p class="text-muted mb-md">Содержимое модального окна. Можно
+               разместить форму, текст или картинку.</p>
+            <a href="#modal" class="button button--secondary button--block">Закрыть</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================
+           11. ПОЗИЦИОНИРОВАНИЕ
+           ============================ -->
+      <section class="sg-section" id="positioning">
+        <h2 class="sg-section__title">11. Позиционирование</h2>
+
+        <table class="table mb-lg">
+          <thead>
+            <tr>
+              <th>Свойство</th>
+              <th>Где используется</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>position: relative</code></td>
+              <td>Карточка товара (якорь для бейджа)</td>
+            </tr>
+            <tr>
+              <td><code>position: absolute</code></td>
+              <td>Бейдж в углу карточки</td>
+            </tr>
+            <tr>
+              <td><code>position: sticky</code></td>
+              <td>Шапка сайта, боковая навигация стайлгайда</td>
+            </tr>
+            <tr>
+              <td><code>position: fixed</code></td>
+              <td>Модальное окно, кнопка «Наверх» (опционально)</td>
+            </tr>
+            <tr>
+              <td><code>z-index</code></td>
+              <td>Шапка = 100, модалка = 1000, бейдж = 1</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ============================
+           12. ОТСТУПЫ
+           ============================ -->
+      <section class="sg-section" id="spacing">
+        <h2 class="sg-section__title">12. Отступы</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Переменная</th>
+              <th>Значение</th>
+              <th>Применение</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--space-xs</code></td><td>4px</td><td>мелкие зазоры внутри строк</td></tr>
+            <tr><td><code>--space-sm</code></td><td>8px</td><td>между иконкой и текстом</td></tr>
+            <tr><td><code>--space-md</code></td><td>16px</td><td>padding в карточках, gap по умолчанию</td></tr>
+            <tr><td><code>--space-lg</code></td><td>24px</td><td>между карточками в сетке</td></tr>
+            <tr><td><code>--space-xl</code></td><td>32px</td><td>padding в секциях</td></tr>
+            <tr><td><code>--space-2xl</code></td><td>48px</td><td>вертикальные отступы секций</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ============================
+       ПОДВАЛ
+       ============================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Каталог услуг по изучению осетинского языка · Style Guide</p>
+    </div>
+  </footer>
+
+</body>
+</html>

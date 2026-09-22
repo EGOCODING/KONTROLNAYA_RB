@@ -1,0 +1,26 @@
+id,article,title,category,description,price,old_price,badge,image,in_stock,rating
+1,EL-001,Смартфон Galaxy A55,Смартфоны,"6.6"" AMOLED, 8/256 ГБ, камера 50 МП",34990,39990,Хит,images/phone-galaxy-a55.jpg,1,4.8
+2,EL-002,Смартфон iPhone 15,Смартфоны,"6.1"" OLED, 128 ГБ, чип A16 Bionic",79990,,Новинка,images/phone-iphone-15.jpg,1,4.9
+3,EL-003,Смартфон Xiaomi Redmi Note 13,Смартфоны,"6.67"" AMOLED, 8/256 ГБ, батарея 5000 мАч",22990,25990,Скидка,images/phone-redmi-note-13.jpg,1,4.6
+4,EL-004,Смартфон Google Pixel 8,Смартфоны,"6.2"" OLED, 8/128 ГБ, чистый Android",64990,,,images/phone-pixel-8.jpg,1,4.7
+5,EL-005,Смартфон Samsung Galaxy S24 Ultra,Смартфоны,"6.8"" QHD+, 12/512 ГБ, стилус S Pen",129990,,,images/phone-s24-ultra.jpg,0,4.9
+6,EL-006,Ноутбук MacBook Air M3,Ноутбуки,"13.6"" Retina, 8/256 ГБ, до 18 часов работы",109990,119990,Скидка,images/laptop-macbook-air.jpg,1,4.9
+7,EL-007,Ноутбук ASUS VivoBook 15,Ноутбуки,"15.6"" Full HD, Ryzen 5, 16/512 ГБ",54990,,,images/laptop-asus-vivobook.jpg,1,4.5
+8,EL-008,Ноутбук Lenovo IdeaPad Slim 3,Ноутбуки,"15.6"" IPS, Intel Core i5, 16/512 ГБ",49990,57990,Скидка,images/laptop-lenovo-ideapad.jpg,1,4.4
+9,EL-009,Ноутбук Huawei MateBook D16,Ноутбуки,"16"" IPS, Intel Core i7, 16/1 ТБ",74990,,Новинка,images/laptop-huawei-matebook.jpg,1,4.7
+10,EL-010,Планшет iPad Air 11,Планшеты,"11"" Liquid Retina, 128 ГБ, чип M2",64990,,,images/tablet-ipad-air.jpg,1,4.8
+11,EL-011,Планшет Samsung Galaxy Tab S9,Планшеты,"11"" AMOLED, 8/128 ГБ, стилус в комплекте",59990,66990,Скидка,images/tablet-galaxy-tab-s9.jpg,1,4.6
+12,EL-012,Наушники AirPods Pro 2,Наушники,"Активное шумоподавление, USB-C, MagSafe",19990,,Хит,images/headphones-airpods-pro.jpg,1,4.9
+13,EL-013,Наушники Sony WH-1000XM5,Наушники,"Полноразмерные, Bluetooth, до 30 часов",29990,34990,Скидка,images/headphones-sony-xm5.jpg,1,4.8
+14,EL-014,Наушники JBL Tune 770NC,Наушники,"Накладные, Bluetooth 5.3, до 70 часов",8990,,,images/headphones-jbl-770.jpg,1,4.4
+15,EL-015,Умные часы Apple Watch Series 9,Умные часы,"45 мм, GPS, Always-On Retina",39990,,Новинка,images/watch-apple-s9.jpg,1,4.9
+16,EL-016,Умные часы Samsung Galaxy Watch 6,Умные часы,"44 мм, AMOLED, BT, GPS",24990,27990,Скидка,images/watch-galaxy-6.jpg,1,4.6
+17,EL-017,Умные часы Huawei Watch GT 4,Умные часы,"46 мм, до 14 дней автономности",19990,,,images/watch-huawei-gt4.jpg,1,4.5
+18,EL-018,Телевизор LG OLED evo C4,Телевизоры,"55"", 4K, 120 Гц, Smart TV",139990,159990,Скидка,images/tv-lg-oled-c4.jpg,1,4.9
+19,EL-019,Телевизор Samsung QLED Q60D,Телевизоры,"50"", 4K, Quantum HDR, Smart TV",54990,,,images/tv-samsung-q60d.jpg,1,4.5
+20,EL-020,Игровая консоль PlayStation 5 Slim,Игровые консоли,"1 ТБ, Blu-ray, геймпад DualSense",59990,,Хит,images/console-ps5-slim.jpg,1,4.9
+21,EL-021,Игровая консоль Xbox Series X,Игровые консоли,"1 ТБ, 4K, 120 FPS, геймпад",54990,59990,Скидка,images/console-xbox-series-x.jpg,1,4.7
+22,EL-022,Портативная консоль Steam Deck OLED,Игровые консоли,"7.4"" HDR OLED, 512 ГБ, SteamOS",64990,,Новинка,images/console-steam-deck.jpg,0,4.8
+23,EL-023,Фотоаппарат Sony Alpha A6700,Фотоаппараты,"26 МП APS-C, 4K 120fps, стабилизация",139990,,,images/camera-sony-a6700.jpg,1,4.9
+24,EL-024,Фотоаппарат Canon EOS R50,Фотоаппараты,"24 МП APS-C, 4K 30fps, компактный",64990,69990,Скидка,images/camera-canon-r50.jpg,1,4.6
+25,EL-025,Экшн-камера GoPro HERO 12,Фотоаппараты,"5.3K, HyperSmooth, водонепроницаемая",39990,,Хит,images/camera-gopro-hero12.jpg,1,4.8
