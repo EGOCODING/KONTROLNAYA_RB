@@ -9,21 +9,95 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="site-header__inner">  
-      <a href="index.html" class="site-header__logo">ООО Борис</a>
-      <nav class="site-nav">
-        <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#modal-order">Оставить заявку</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+
+  <div class="site-header__inner">
+    <label for="burger-toggle" class="burger" aria-label="Открыть меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </label>
+
+    <a href="index.html" class="site-header__logo">БОРИС</a>
+
+    <a href="tel:89888759583" class="site-header__phone">8 988 875-95-83</a>
+  </div>
+
+  <nav class="site-nav" id="site-nav">
+    <ul class="site-nav__list">
+
+      <li class="site-nav__item">
+        <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+      </li>
+
+<li class="site-nav__item">
+  <input type="checkbox" id="submenu-catalog" class="site-nav__checkbox" hidden>
+
+  <div class="site-nav__row">
+    <a href="catalog.html" class="site-nav__link">Каталог</a>
+    <label for="submenu-catalog" class="site-nav__arrow" aria-label="Раскрыть подменю"></label>
+  </div>
+
+  <ul class="site-nav__sublist">
+    <li><a class="site-nav__sublink" href="catalog.html?category=phones">Смартфоны</a></li>
+    <li><a class="site-nav__sublink" href="catalog.html?category=laptops">Ноутбуки</a></li>
+    <li><a class="site-nav__sublink" href="catalog.html?category=tablets">Планшеты</a></li>
+    <li><a class="site-nav__sublink" href="catalog.html?category=headphones">Наушники</a></li>
+    <li><a class="site-nav__sublink" href="catalog.html?category=watches">Умные часы</a></li>
+    <li><a class="site-nav__sublink" href="catalog.html?category=tv">Телевизоры</a></li>
+  </ul>
+</li>
+
+<li class="site-nav__item">
+  <input type="checkbox" id="submenu-promo" class="site-nav__checkbox" hidden>
+  <div class="site-nav__row">
+    <a href="promo.html" class="site-nav__link">Акции</a>
+    <label for="submenu-promo" class="site-nav__arrow" aria-label="Раскрыть подменю Акции"></label>
+  </div>
+  <ul class="site-nav__sublist">
+    <li><a class="site-nav__sublink" href="promo.html#new">Новинки</a></li>
+    <li><a class="site-nav__sublink" href="promo.html#sale">Скидки</a></li>
+    <li><a class="site-nav__sublink" href="promo.html#hit">Хиты продаж</a></li>
+  </ul>
+</li>
+<li class="site-nav__item">
+  <input type="checkbox" id="submenu-info" class="site-nav__checkbox" hidden>
+  <div class="site-nav__row">
+    <a href="info.html" class="site-nav__link">Информация</a>
+    <label for="submenu-info" class="site-nav__arrow" aria-label="Раскрыть подменю Информация"></label>
+  </div>
+  <ul class="site-nav__sublist">
+    <li><a class="site-nav__sublink" href="info.html#about">О компании</a></li>
+    <li><a class="site-nav__sublink" href="info.html#news">Новости</a></li>
+    <li><a class="site-nav__sublink" href="info.html#vacancy">Вакансии</a></li>
+  </ul>
+</li>
+<li class="site-nav__item">
+  <input type="checkbox" id="submenu-buyers" class="site-nav__checkbox" hidden>
+  <div class="site-nav__row">
+    <a href="buyers.html" class="site-nav__link">Покупателям</a>
+    <label for="submenu-buyers" class="site-nav__arrow" aria-label="Раскрыть подменю Покупателям"></label>
+  </div>
+  <ul class="site-nav__sublist">
+    <li><a class="site-nav__sublink" href="delivery.html">Доставка и оплата</a></li>
+    <li><a class="site-nav__sublink" href="warranty.html">Гарантия</a></li>
+    <li><a class="site-nav__sublink" href="service.html">Сервисные центры</a></li>
+    <li><a class="site-nav__sublink" href="order.html">Оформление заказа</a></li>
+    <li><a class="site-nav__sublink" href="credit.html">Кредит и рассрочка</a></li>
+  </ul>
+</li>
+
+<li class="site-nav__item site-nav__item--action">
+  <a class="button button--primary button--block" href="contacts.html#question">Задать вопрос</a>
+</li>
+    <h5>или</h5>
+    <h3 class = "text-primary" style = "color:blue">+7 (988) 875 - 95 - 83</h3>
+    </ul>
+  </nav>
+
+  <label for="burger-toggle" class="site-nav__overlay" aria-label="Закрыть меню"></label>
+</header>
 
   <main>
 

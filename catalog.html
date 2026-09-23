@@ -9,21 +9,62 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="site-header__inner">
-      <a href="index.html" class="site-header__logo">БОРИС</a>
-      <nav class="site-nav">
-        <ul class="site-nav__list">
-          <li><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
-          <li><a class="site-nav__link" href="product.html">Товар</a></li>
-          <li><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
-          <li><a class="site-nav__link" href="#modal-order">Оставить заявку</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+
+  <div class="site-header__inner">
+    <label for="burger-toggle" class="burger" aria-label="Открыть меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </label>
+
+    <a href="index.html" class="site-header__logo">БОРИС</a>
+
+    <a href="tel:89888759583" class="site-header__phone">8 988 875-95-83</a>
+  </div>
+
+  <nav class="site-nav" id="site-nav">
+    <ul class="site-nav__list">
+
+      <li class="site-nav__item">
+        <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
+      </li>
+
+      <li class="site-nav__item">
+        <a class="site-nav__link" href="catalog.html">Каталог</a>
+      </li>
+
+      <li class="site-nav__item">
+        <a class="site-nav__link" href="promo.html">Акции</a>
+      </li>
+
+      <li class="site-nav__item">
+        <a class="site-nav__link" href="info.html">Информация</a>
+      </li>
+
+      <li class="site-nav__item">
+        <details class="site-nav__details">
+          <summary class="site-nav__link site-nav__link--summary">Покупателям</summary>
+          <ul class="site-nav__sublist">
+            <li><a class="site-nav__sublink" href="delivery.html">Доставка и оплата</a></li>
+            <li><a class="site-nav__sublink" href="warranty.html">Гарантия</a></li>
+            <li><a class="site-nav__sublink" href="service.html">Сервисные центры</a></li>
+            <li><a class="site-nav__sublink" href="order.html">Оформление заказа</a></li>
+            <li><a class="site-nav__sublink" href="credit.html">Кредит и рассрочка</a></li>
+          </ul>
+        </details>
+      </li>
+
+      <li class="site-nav__item site-nav__item--action">
+        <a class="button button--primary button--block" href="contacts.html#question">Задать вопрос</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <label for="burger-toggle" class="site-nav__overlay" aria-label="Закрыть меню"></label>
+</header>
 
   <main>
 
