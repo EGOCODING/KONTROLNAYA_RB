@@ -9,7 +9,115 @@
 </head>
 <body>
 
+<header class="site-header"><!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Смартфон Galaxy A55 — ООО «БОРИС»</title>
+  <meta name="description" content="Характеристики и цена смартфона Galaxy A55">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
 <header class="site-header">
+  <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
+  <div class="site-header__inner">
+    <label for="burger-toggle" class="burger" aria-label="Открыть меню">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </label>
+    <a href="index.html" class="site-header__logo">БОРИС</a>
+    <a href="tel:89888759583" class="site-header__phone">8 988 875-95-83</a>
+  </div>
+
+<nav class="site-nav" id="site-nav">
+  <ul class="site-nav__list">
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="index.html">Главная</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="catalog.html">Каталог</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="product.html">Товар</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="order.html">Заявка</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="contacts.html">Контакты</a>
+    </li>
+    <li class="site-nav__item site-nav__item--action">
+      <a class="button button--primary button--block" href="contacts.html#question">Задать вопрос</a>
+    </li>
+  </ul>
+</nav>
+  <label for="burger-toggle" class="site-nav__overlay" aria-label="Закрыть меню"></label>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a> / <a href="catalog.html">Каталог</a> / <span>Смартфон Galaxy A55</span>
+      </nav>
+
+      <div class="product">
+        <div class="product__media">
+          <img class="product__image" src="images/placeholder.svg" alt="Смартфон Galaxy A55">
+        </div>
+        <div class="product__info">
+          <span class="badge badge--hit">Хит</span>
+          <h1 class="product__title">Смартфон Galaxy A55</h1>
+          <p class="product__meta">Артикул: SM-A556 · В наличии</p>
+          <p class="product__description">
+            6.6" AMOLED, 8/256 ГБ, камера 50 МП. Стильный смартфон с ярким экраном,
+            мощным процессором и отличной автономностью.
+          </p>
+          <p class="product__price">
+            34 990 ₽ <span class="product-card__old-price">39 990 ₽</span>
+          </p>
+          <div class="product__actions">
+            <a class="button button--primary button--lg" href="order.html?id=1">Оставить заявку</a>
+            <a class="button button--secondary button--lg" href="catalog.html">В каталог</a>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-xl mb-md">Характеристики</h2>
+      <table class="table">
+        <caption>Технические характеристики смартфона Galaxy A55</caption>
+        <thead>
+          <tr>
+            <th scope="col">Параметр</th>
+            <th scope="col">Значение</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Экран</th><td>6.6" Super AMOLED, 120 Гц</td></tr>
+          <tr><th scope="row">Процессор</th><td>Exynos 1480</td></tr>
+          <tr><th scope="row">Память</th><td>8 ГБ ОЗУ / 256 ГБ</td></tr>
+          <tr><th scope="row">Камера</th><td>50 МП + 12 МП + 5 МП</td></tr>
+          <tr><th scope="row">Батарея</th><td>5000 мАч, зарядка 25 Вт</td></tr>
+          <tr><th scope="row">ОС</th><td>Android 14</td></tr>
+          <tr><th scope="row">Гарантия</th><td>12 месяцев</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 ООО «БОРИС» · Электроника и гаджеты</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
   <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
 
   <div class="site-header__inner">
