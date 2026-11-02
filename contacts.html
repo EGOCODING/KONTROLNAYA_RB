@@ -3,86 +3,124 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Каталог услуг</title>
-  <meta name="description" content="Каталог услуг по изучению осетинского языка">
+  <title>Контакты — ООО «БОРИС»</title>
+  <meta name="description" content="Контакты и форма обратной связи ООО БОРИС">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
   <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
-
   <div class="site-header__inner">
     <label for="burger-toggle" class="burger" aria-label="Открыть меню">
       <span class="burger__line"></span>
       <span class="burger__line"></span>
       <span class="burger__line"></span>
     </label>
-
     <a href="index.html" class="site-header__logo">БОРИС</a>
-
     <a href="tel:89888759583" class="site-header__phone">8 988 875-95-83</a>
   </div>
 
-  <nav class="site-nav" id="site-nav">
-    <ul class="site-nav__list">
-
-      <li class="site-nav__item">
-        <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
-      </li>
-
-      <li class="site-nav__item">
-        <a class="site-nav__link" href="catalog.html">Каталог</a>
-      </li>
-
-      <li class="site-nav__item">
-        <a class="site-nav__link" href="promo.html">Акции</a>
-      </li>
-
-      <li class="site-nav__item">
-        <a class="site-nav__link" href="info.html">Информация</a>
-      </li>
-
-      <li class="site-nav__item">
-        <details class="site-nav__details">
-          <summary class="site-nav__link site-nav__link--summary">Покупателям</summary>
-          <ul class="site-nav__sublist">
-            <li><a class="site-nav__sublink" href="delivery.html">Доставка и оплата</a></li>
-            <li><a class="site-nav__sublink" href="warranty.html">Гарантия</a></li>
-            <li><a class="site-nav__sublink" href="service.html">Сервисные центры</a></li>
-            <li><a class="site-nav__sublink" href="order.html">Оформление заказа</a></li>
-            <li><a class="site-nav__sublink" href="credit.html">Кредит и рассрочка</a></li>
-          </ul>
-        </details>
-      </li>
-
-      <li class="site-nav__item site-nav__item--action">
-        <a class="button button--primary button--block" href="contacts.html#question">Задать вопрос</a>
-      </li>
-
-    </ul>
-  </nav>
-
+<nav class="site-nav" id="site-nav">
+  <ul class="site-nav__list">
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="index.html">Главная</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="catalog.html">Каталог</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="product.html">Товар</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="order.html">Заявка</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="contacts.html">Контакты</a>
+    </li>
+    <li class="site-nav__item site-nav__item--action">
+      <a class="button button--primary button--block" href="contacts.html#question">Задать вопрос</a>
+    </li>
+  </ul>
+</nav>
   <label for="burger-toggle" class="site-nav__overlay" aria-label="Закрыть меню"></label>
 </header>
 
-  <main>
-  <article class="product-action" >
-  <span class = "product-action_badge"><h3>Не пропустите акцию</h3></span>
-  <img class = "product-action_img" src = "images/skidka.jpg" width = "350" height = "250" alt = "Только сегодня">
-  <h2 class = "product-action_title">Вы ахуеете что там за акция того рот ебал
-    <p class = "product-action_description"><h4>норм акция честно пацаны</h4></p>
-    <p class = "product-action_price"><h1>7000 Rubles</h1></p>
-    <p class = "product_action_button button" href = "product.html"> <h3>УЗНАТЬ СКАРЕЕ ПРА АКЦИЮ ПАЖАЛУСТА</h3></p>
-</article>
-  </main>
+<main>
+  <section class="section">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a> / <span>Контакты</span>
+      </nav>
+      <h1 class="mb-md">Контакты</h1>
+      <p class="text-muted mb-lg">Свяжитесь с нами любым удобным способом.</p>
 
-  <footer class="site-footer">
-    <!-- подвал -->
-  </footer>
+      <div class="contacts">
+        <div class="contacts__info">
+          <h2>Наши контакты</h2>
+          <ul class="contacts__list">
+            <li><strong>Телефон:</strong> <a href="tel:89888759583">8 988 875-95-83</a></li>
+            <li><strong>Email:</strong> <a href="mailto:info@boris-shop.ru">info@boris-shop.ru</a></li>
+            <li><strong>Адрес:</strong> г. Владикавказ, ул. Мира, 15</li>
+            <li><strong>Часы работы:</strong> Пн–Вс, 09:00–21:00</li>
+          </ul>
+        </div>
+        <div class="contacts__map">
+          <!-- Замени src на актуальный адрес или картинку -->
+          <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=44.6%2C43.0%2C44.7%2C43.1&layer=mapnik"
+                  title="Карта" loading="lazy"></iframe>
+        </div>
+      </div>
 
-  <script src="js/main.js"></script>
+      <section class="section" id="question">
+        <h2 class="mb-md">Задать вопрос</h2>
+        <p class="text-muted mb-lg">Заполните форму, и мы ответим в течение дня.</p>
+
+        <form class="form" action="#" method="post">
+          <div class="form__group">
+            <label class="form__label form__label--required" for="contact-name">Имя</label>
+            <input class="form__input" type="text" id="contact-name" name="name" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label form__label--required" for="contact-email">Email</label>
+            <input class="form__input" type="email" id="contact-email" name="email" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label form__label--required" for="contact-phone">Телефон</label>
+            <input class="form__input" type="tel" id="contact-phone" name="phone" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="contact-topic">Тема</label>
+            <select class="form__select" id="contact-topic" name="topic">
+              <option>Вопрос о товаре</option>
+              <option>Доставка</option>
+              <option>Гарантия</option>
+              <option>Другое</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="contact-comment">Сообщение</label>
+            <textarea class="form__textarea" id="contact-comment" name="comment"></textarea>
+          </div>
+          <div class="form__checkbox">
+            <input type="checkbox" id="contact-agree" name="agree" required>
+            <label for="contact-agree">Согласен на обработку персональных данных</label>
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="button button--primary">Отправить</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 ООО «БОРИС» · Электроника и гаджеты</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
-
-

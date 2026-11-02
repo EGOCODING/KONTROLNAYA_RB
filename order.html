@@ -3,78 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная — Каталог услуг</title>
-  <meta name="description" content="Каталог услуг по изучению осетинского языка">
+  <title>Оформление заказа — ООО «БОРИС»</title>
+  <meta name="description" content="Оставьте заявку на покупку электроники в ООО БОРИС">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <header class="site-header">
   <input type="checkbox" id="burger-toggle" class="burger-toggle" hidden>
-
   <div class="site-header__inner">
     <label for="burger-toggle" class="burger" aria-label="Открыть меню">
       <span class="burger__line"></span>
       <span class="burger__line"></span>
       <span class="burger__line"></span>
     </label>
-
     <a href="index.html" class="site-header__logo">БОРИС</a>
-
     <a href="tel:89888759583" class="site-header__phone">8 988 875-95-83</a>
   </div>
 
-  <nav class="site-nav" id="site-nav">
-    <ul class="site-nav__list">
-
-      <li class="site-nav__item">
-        <a class="site-nav__link site-nav__link--active" href="index.html">Главная</a>
-      </li>
-
-      <li class="site-nav__item">
-        <a class="site-nav__link" href="catalog.html">Каталог</a>
-      </li>
-
-      <li class="site-nav__item">
-        <a class="site-nav__link" href="promo.html">Акции</a>
-      </li>
-
-      <li class="site-nav__item">
-        <a class="site-nav__link" href="info.html">Информация</a>
-      </li>
-
-      <li class="site-nav__item">
-        <details class="site-nav__details">
-          <summary class="site-nav__link site-nav__link--summary">Покупателям</summary>
-          <ul class="site-nav__sublist">
-            <li><a class="site-nav__sublink" href="delivery.html">Доставка и оплата</a></li>
-            <li><a class="site-nav__sublink" href="warranty.html">Гарантия</a></li>
-            <li><a class="site-nav__sublink" href="service.html">Сервисные центры</a></li>
-            <li><a class="site-nav__sublink" href="order.html">Оформление заказа</a></li>
-            <li><a class="site-nav__sublink" href="credit.html">Кредит и рассрочка</a></li>
-          </ul>
-        </details>
-      </li>
-
-      <li class="site-nav__item site-nav__item--action">
-        <a class="button button--primary button--block" href="contacts.html#question">Задать вопрос</a>
-      </li>
-
-    </ul>
-  </nav>
-
+<nav class="site-nav" id="site-nav">
+  <ul class="site-nav__list">
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="index.html">Главная</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="catalog.html">Каталог</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="product.html">Товар</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="order.html">Заявка</a>
+    </li>
+    <li class="site-nav__item">
+      <a class="site-nav__link" href="contacts.html">Контакты</a>
+    </li>
+    <li class="site-nav__item site-nav__item--action">
+      <a class="button button--primary button--block" href="contacts.html#question">Задать вопрос</a>
+    </li>
+  </ul>
+</nav>
   <label for="burger-toggle" class="site-nav__overlay" aria-label="Закрыть меню"></label>
 </header>
 
-  <main>
-    <!-- уникальный контент -->
-  </main>
+<main>
+  <section class="section">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <a href="index.html">Главная</a> / <span>Оформление заказа</span>
+      </nav>
+      <h1 class="mb-md">Оформление заказа</h1>
+      <p class="text-muted mb-lg">Заполните форму — мы свяжемся с вами в течение 15 минут.</p>
 
-  <footer class="site-footer">
-    <!-- подвал -->
-  </footer>
+      <form class="form" action="#" method="post">
+        <div class="form__group">
+          <label class="form__label form__label--required" for="order-name">Имя</label>
+          <input class="form__input" type="text" id="order-name" name="name" placeholder="Иван Иванов" required>
+        </div>
 
-  <script src="js/main.js"></script>
+        <div class="form__group">
+          <label class="form__label form__label--required" for="order-email">Email</label>
+          <input class="form__input" type="email" id="order-email" name="email" placeholder="ivan@example.com" required>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label form__label--required" for="order-phone">Телефон</label>
+          <input class="form__input" type="tel" id="order-phone" name="phone" placeholder="+7 (___) ___-__-__" required>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="order-product">Товар</label>
+          <select class="form__select" id="order-product" name="product">
+            <option value="">— Выберите товар —</option>
+            <option>Смартфон Galaxy A55</option>
+            <option>Смартфон iPhone 15</option>
+            <option>Ноутбук MacBook Air M3</option>
+            <option>Наушники AirPods Pro 2</option>
+            <option>Другое</option>
+          </select>
+        </div>
+
+        <div class="form__group">
+          <label class="form__label" for="order-comment">Комментарий</label>
+          <textarea class="form__textarea" id="order-comment" name="comment" placeholder="Уточните детали заказа"></textarea>
+        </div>
+
+        <div class="form__checkbox">
+          <input type="checkbox" id="order-agree" name="agree" required>
+          <label for="order-agree">Согласен на обработку персональных данных</label>
+        </div>
+
+        <div class="form__actions">
+          <button type="submit" class="button button--primary button--lg">Отправить заявку</button>
+          <button type="reset" class="button button--ghost">Очистить</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© 2026 ООО «БОРИС» · Электроника и гаджеты</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>
-
-
